@@ -1,0 +1,55 @@
+@font-face
+{
+   font-family: "Backtoblack";
+   src: url("../fonts/Back_to_Black.ttf") format("truetype");
+}
+@font-face
+{
+   font-family: "Bevan";
+   src: url("../fonts/Bevan.ttf") format("truetype");
+}
+@font-face
+{
+   font-family: "BodoniXT";
+   src: url("../fonts/BodoniXT.ttf") format("truetype");
+}
+h1 {
+  font-family: "Bevan";
+  color: #00620b;
+  font-size: 48px;
+}
+h2 {
+  font-family: "BodoniXT";
+  color: #000;
+  font-size: 40px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  background-color: #bdc3c7;
+}
+.logo {
+  width: 30%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.container1 {
+  background-color: #bdc3c7;
+  padding-bottom: 15px;
+}
+.tope {
+    position: /* fixed */;
+    left:0;
+    right:0;
+    width:100%;
+    height:auto;
+    background-color: #FFF;
+    margin:auto;
+}
+.siguiente {
+  margin-top: 250px;
+}
