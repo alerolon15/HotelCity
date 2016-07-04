@@ -53,10 +53,11 @@
 }
 .txt
 {
-    font-size: 30px;
+    font-size: 38px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 20px;
-    font-family: 'Lato' , sans-serif;
+    margin-top: 17px;
+    font-family: "BodoniXT";
     line-height: 30px;
     color: #333;
 }
@@ -100,4 +101,29 @@
 .active
 {
     color: #3498db;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 20px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 40px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 14px 16px;
+  font-size: 40px;
+  line-height: 1.33;
+  border-radius: 35px;
 }

@@ -22,6 +22,26 @@ h2 {
   font-family: "BodoniXT";
   color: #000;
   font-size: 40px;
+  margin: 0 20px;
+}
+h3 {
+  font-family: "Backtoblack";
+  color: #000;
+  font-size: 70px;
+  margin: 40px 20px;
+}
+h4 {
+  font-family: "Backtoblack";
+  color: #000;
+  font-size: 40px;
+  margin: 0 20px;
+}
+p {
+  font-family: "BodoniXT";
+  color: #000;
+  font-size: 40px;
+  margin: 0;
+
 }
 * {
   margin: 0;
@@ -30,6 +50,7 @@ h2 {
 body {
   position: relative;
   background-color: #bdc3c7;
+  top: 210px;
 }
 .logo {
   width: 30%;
@@ -39,17 +60,60 @@ body {
 }
 .container1 {
   background-color: #bdc3c7;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+  height: 550px;
 }
 .tope {
-    position: /* fixed */;
     left:0;
     right:0;
     width:100%;
     height:auto;
     background-color: #FFF;
     margin:auto;
+    z-index: 1;
+    top: 0;
 }
 .siguiente {
   margin-top: 250px;
 }
+.fondo{
+  position: absolute;
+  top: 250px;
+  left: 25%;
+}
+input[type=radio].css-checkbox {
+							position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+						}
+
+						input[type=radio].css-checkbox + label.css-label {
+							padding-left:35px;
+							height:30px;
+							display:inline-block;
+							line-height:30px;
+							background-repeat:no-repeat;
+							background-position: 0 0;
+							font-size:30px;
+							vertical-align:middle;
+							cursor:pointer;
+
+						}
+
+						input[type=radio].css-checkbox:checked + label.css-label {
+							background-position: 0 -30px;
+						}
+						label.css-label {
+				background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_a27bc31dc40cadf0d5347303929eae5a.png);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+table {
+  width: 100%;
+}
+label{
+  margin: 10%;
+}
+.clear{clear: both;}
