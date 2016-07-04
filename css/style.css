@@ -51,6 +51,7 @@ body {
   position: relative;
   background-color: #bdc3c7;
   top: 210px;
+  overflow-y: hidden;
 }
 .logo {
   width: 30%;
