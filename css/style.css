@@ -16,12 +16,12 @@
 h1 {
   font-family: "Bevan";
   color: #00620b;
-  font-size: 48px;
+  font-size: 36px;
 }
 h2 {
   font-family: "BodoniXT";
   color: #000;
-  font-size: 40px;
+  font-size: 28px;
   margin: 0 20px;
 }
 h3 {
@@ -50,11 +50,11 @@ p {
 body {
   position: relative;
   background-color: #bdc3c7;
-  top: 210px;
+  top: 140px;
   overflow-y: hidden;
 }
 .logo {
-  width: 30%;
+  width: 20%;
   height: 80%;
   margin: 0 auto;
   padding: 10px 0;
@@ -79,7 +79,7 @@ body {
 }
 .fondo{
   position: absolute;
-  top: 250px;
+  top: 200px;
   left: 25%;
 }
 input[type=radio].css-checkbox {
