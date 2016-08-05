@@ -51,11 +51,11 @@ body {
   position: relative;
   background-color: #bdc3c7;
   top: 140px;
-  overflow-y: hidden;
+  /*overflow-y: hidden;*/
 }
 .logo {
   width: 20%;
-  height: 80%;
+  /*height: 80%;*/
   margin: 0 auto;
   padding: 10px 0;
 }
