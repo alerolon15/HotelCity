@@ -11,9 +11,9 @@
       $conexion=mysqli_connect("mysql.hostinger.com.ar","u837072465_hotel","hotelcity","u837072465_enc") or
           die("Problemas con la conexión");
 
-      $todo=mysqli_query($conexion,"SELECT * FROM Encuesta")
+      $todo=mysqli_query($conexion,"SELECT * FROM Encuesta WHERE nroHab = '$_REQUEST[NroHabitacion]'")
           or die("Problemas en el select".mysqli_error($conexion));
-
+          echo $_REQUEST[NroHabitacion];
 
       while ($reg=mysqli_fetch_array($todo))
         {
@@ -66,6 +66,7 @@
 <canvas id="myChart"></canvas></div>
 
 <script>
+var nroHabit = <?php echo $_REQUEST[NroHabitacion]; ?>;
 var count = <?php echo $count; ?>;
 var promedio1 = <?php echo $promedio1; ?>;
 var promedio2 = <?php echo $promedio2; ?>;
@@ -82,7 +83,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ["Personal", "Decoracion", "Limpieza", "Desayuno", "WI-FI", "Precio/calidad", "Hotel"],
         datasets: [{
-            label: count + " encuestas realizadas!",
+            label: "Habitacion Nro: " + nroHabit,
             data: [promedio1,promedio2,promedio3,promedio4,promedio5,promedio6,promedio7],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
