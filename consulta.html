@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>consulta por habitacion</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
   </head>
   <body>
-    <h1>Consultar por Nro Habitacion</h1>
-    <form action="habitacion.php" method="post">
-      <input type="number" name="NroHabitacion" value="" />
-      <button type="submit" name="button">buscar</button>
-      <a href="" onclick="document.forms[0].submit();return false;"></a>
-    </form>
+    <div class="container">
+      <div class="row col-xs-12 col-md-4">
+        <form class="form-signin" action="habitacion.php" method="post">
+        <h2>Consultar por Nro Habitacion</h2>
+        <label for="inputEmail" class="sr-only">Nro de Habitacion</label>
+        <input type="number" id="inputEmail" class="form-control" placeholder="Ej: 205" required="" autofocus="" name="NroHabitacion" value="" >
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Consultar</button>
+      </form>
+    </div>
+  </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
   </body>
 </html>

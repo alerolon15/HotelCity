@@ -14,7 +14,8 @@
       $todo=mysqli_query($conexion,"SELECT * FROM Encuesta")
           or die("Problemas en el select".mysqli_error($conexion));
 
-
+  if ($reg=mysqli_fetch_array($todo))
+  {
       while ($reg=mysqli_fetch_array($todo))
         {
           echo "Numero de Consulta:".$reg['id']."<br>";
@@ -53,7 +54,9 @@
         echo "Precio/Calidad:    ".round($promedio6,1)."<br>";
         echo "Hotel:             ".round($promedio7,1)."<br>";
         echo "<hr>";
-
+    }else {
+      echo "No existen Registros!";
+    }
       mysqli_close($conexion);
     ?>
 </pre>
