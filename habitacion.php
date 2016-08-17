@@ -13,7 +13,7 @@
 
       $todo=mysqli_query($conexion,"SELECT * FROM Encuesta WHERE nroHab = '$_REQUEST[NroHabitacion]'")
           or die("Problemas en el select".mysqli_error($conexion));
-          
+
 if ($reg=mysqli_fetch_array($todo)){
       while ($reg=mysqli_fetch_array($todo))
         {
@@ -54,7 +54,7 @@ if ($reg=mysqli_fetch_array($todo)){
         echo "Hotel:             ".round($promedio7,1)."<br>";
         echo "<hr>";
 }else {
-  echo "no Existen Registros!";
+  echo "no Existen Registros de esta Habitacion!";
 }
       mysqli_close($conexion);
     ?>
