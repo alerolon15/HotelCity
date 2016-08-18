@@ -9,10 +9,12 @@
   <pre>
     <?php
       $conexion=mysqli_connect("mysql.hostinger.com.ar","u837072465_hotel","hotelcity","u837072465_enc") or
-          die("Problemas con la conexión");
+          die("Problemas con la conexion");
 
       $todo=mysqli_query($conexion,"SELECT * FROM Encuesta WHERE nroHab = '$_REQUEST[NroHabitacion]'")
           or die("Problemas en el select".mysqli_error($conexion));
+
+      $count = 0;
 
 if ($reg=mysqli_fetch_array($todo)){
       while ($reg=mysqli_fetch_array($todo))
@@ -27,7 +29,6 @@ if ($reg=mysqli_fetch_array($todo)){
           echo "Precio/Calidad:    ".$reg['Pregunta6']."<br>";
           echo "Hotel:             ".$reg['Pregunta7']."<br>";
           echo "<hr>";
-          $count = $reg['id'];
           $promedio1 = $promedio1 + $reg['Pregunta1'];
           $promedio2 = $promedio2 + $reg['Pregunta2'];
           $promedio3 = $promedio3 + $reg['Pregunta3'];
@@ -35,6 +36,7 @@ if ($reg=mysqli_fetch_array($todo)){
           $promedio5 = $promedio5 + $reg['Pregunta5'];
           $promedio6 = $promedio6 + $reg['Pregunta6'];
           $promedio7 = $promedio7 + $reg['Pregunta7'];
+          $count = $count + 1;
         }
         echo "Cantidad de Encuestas: ".$count."<br>";
         $promedio1 = $promedio1/$count;

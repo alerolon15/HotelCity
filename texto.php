@@ -2,22 +2,28 @@
 <html lang="es">
 <head>
   <title>Consulta</title>
-
-
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style media="screen">
+    pre{
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
   <pre>
     <?php
       $conexion=mysqli_connect("mysql.hostinger.com.ar","u837072465_hotel","hotelcity","u837072465_enc") or
-          die("Problemas con la conexión");
+          die("Problemas con la conexion");
 
       $todo=mysqli_query($conexion,"SELECT * FROM Encuesta")
           or die("Problemas en el select".mysqli_error($conexion));
 
-  if ($reg=mysqli_fetch_array($todo))
-  {
+      $count = 0;
+      echo "<div class='row'>";
+
       while ($reg=mysqli_fetch_array($todo))
         {
+          echo "<div class='col-xs-2'>";
           echo "Numero de Consulta:".$reg['id']."<br>";
           echo "Nro Habitacion:    ".$reg['nroHab']."<br>";
           echo "Personal:          ".$reg['Pregunta1']."<br>";
@@ -28,7 +34,7 @@
           echo "Precio/Calidad:    ".$reg['Pregunta6']."<br>";
           echo "Hotel:             ".$reg['Pregunta7']."<br>";
           echo "<hr>";
-          $count = $reg['id'];
+          echo "</div>";
           $promedio1 = $promedio1 + $reg['Pregunta1'];
           $promedio2 = $promedio2 + $reg['Pregunta2'];
           $promedio3 = $promedio3 + $reg['Pregunta3'];
@@ -36,7 +42,11 @@
           $promedio5 = $promedio5 + $reg['Pregunta5'];
           $promedio6 = $promedio6 + $reg['Pregunta6'];
           $promedio7 = $promedio7 + $reg['Pregunta7'];
+          $count = $count + 1;
         }
+        echo "</div>";
+        echo "<div class='row'>";
+        echo "<div class='col-xs-2'>";
         echo "Cantidad de Encuestas: ".$count."<br>";
         $promedio1 = $promedio1/$count;
         $promedio2 = $promedio2/$count;
@@ -54,9 +64,8 @@
         echo "Precio/Calidad:    ".round($promedio6,1)."<br>";
         echo "Hotel:             ".round($promedio7,1)."<br>";
         echo "<hr>";
-    }else {
-      echo "No existen Registros!";
-    }
+        echo "</div>";
+        echo "</div>";
       mysqli_close($conexion);
     ?>
 </pre>
@@ -119,6 +128,7 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
-
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
 </body>
 </html>
