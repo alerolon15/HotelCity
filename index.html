@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1200, height=600, initial-scale=1">
     <title>Hotel City - Encuesta</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/teclado.css">
-    <link rel="stylesheet" href="css/build.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -102,7 +101,7 @@
                             <div class="span4">
                                 <div class="num">
                                     <div class="txt">
-                                        <
+                                        A
                                     </div>
                                 </div>
                             </div>
@@ -631,17 +630,20 @@
           <h3>!Muchas Gracias!</h1>
           <h4><strong><em>-!Thank you!-</em></strong></h2>
           <h4><strong><em>Su opinión nos permite mejorar -!help us improve!-/</em></strong></h2>
-              <div class="col-xs-8 col-xs-offset-2" style="top: 100px;">
-                <a href="index.html" onclick="document.forms[0].submit();return false;"><h1>Finalizar/Finish</h1></a>
-              </div>
+            <div class="col-xs-2">
+              <button onclick="$('html,body').animate({scrollTop:0},'slow');return false;" type="button" class="btn btn-danger btn-circle btn-xl" style="margin-top: 100px"><i class="glyphicon glyphicon-chevron-up"></i></button>
+            </div>
+            <div class="col-xs-8" style="top: 100px;">
+              <a href="index.html" onclick="document.forms[0].submit();return false;"><h1>Finalizar/Finish</h1></a>
             </div>
           </div>
+        </div>
       </div>
     </form>
     <footer>
     </footer>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
     $(document).ready(function () {
       $('.num').click(function () {
